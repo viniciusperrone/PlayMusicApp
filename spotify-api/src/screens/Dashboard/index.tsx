@@ -1,10 +1,13 @@
 import React from 'react';
 import {
-    View, Text, StyleSheet
+    Text, StyleSheet, Image
 } from 'react-native';
 
 import Background from '../../components/Background';
-  
+import BarDown from '../../components/BarDown';
+
+import SpotifyIcon from '../../assets/spotify-icon.png';
+
 import { TopBar, MainContent } from './style';
 
 const Dashboard: React.FC = () => {
@@ -14,8 +17,15 @@ const Dashboard: React.FC = () => {
                 <Text style={style.text}>Boa noite</Text>
             </TopBar>
             <MainContent>
-                <Text>Dashboard</Text>
+                <Image 
+                    source={SpotifyIcon}
+                    style={style.image}
+                    resizeMode="contain"
+                />
+
+                {/* <SpotifyIcon height={300} width={300} fill="blue" /> */}
             </MainContent>
+            <BarDown />
         </Background>
 
     )
@@ -27,6 +37,10 @@ const style = StyleSheet.create({
         fontSize: 24,
         fontWeight: '200',
         color: '#fff'
+    },
+    image: {
+        height: 300,
+        width: 300
     }
 })
 

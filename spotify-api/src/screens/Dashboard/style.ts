@@ -9,8 +9,6 @@ export const TopBar = styled.View`
 
 export const MainContent = styled.View`
     flex: 1;
-    background-color: #fff;
-
     justify-content: center;
     align-items: center;
 `;

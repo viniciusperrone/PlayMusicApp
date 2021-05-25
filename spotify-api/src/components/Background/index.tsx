@@ -1,10 +1,12 @@
 import React from 'react';
 import { LinearGradient } from 'expo-linear-gradient';
-import { SafeAreaView, StatusBar } from 'react-native'
+import { SafeAreaView, StatusBar } from 'react-native';
+
+const color = '#191414 #464769'; 
 
 const Background: React.FC = ({ children }) => {
     return (
-        <SafeAreaView style={{
+        <SafeAreaView style={{ 
             flex: 1,
             width: '100%',
             height: '100%',
@@ -16,7 +18,7 @@ const Background: React.FC = ({ children }) => {
                 barStyle={"dark-content"}
             />
             <LinearGradient
-                colors={['#464769', '#1B1A1F']}
+                colors={['#535353', '#141415']}
                 style={{
                     flex: 1,
                 }}
