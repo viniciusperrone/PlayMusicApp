@@ -1,11 +1,12 @@
+import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native'; 
-import {spotifyCrendentials} from './secrets';
-
+import { StyleSheet, Text, View } from 'react-native';
+ 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Vinicius Perrone</Text>
+      <Text>Vinicius Andrade Perrone</Text>
+      <StatusBar style="auto" />
     </View>
   );
 }
