@@ -2,11 +2,26 @@ import React from 'react';
 import { Text, StyleSheet } from 'react-native';
 import { FooterBar, ButtonNav } from './style';
 import { Entypo, Ionicons } from '@expo/vector-icons';
+import { useNavigation } from '@react-navigation/core';
 
 const BarDown: React.FC = () => {
+
+    const navigation = useNavigation();
+
+    function handleDashboardSelected(){
+        navigation.navigate('Dashboard');
+    }
+    function handleSearchSelected(){
+        navigation.navigate('Search');
+    }
+    function handleLibrarySelected(){
+        navigation.navigate('Library');
+    }
     return (
         <FooterBar>
-            <ButtonNav>
+            <ButtonNav 
+                onPress={handleDashboardSelected}
+            >
                 <Entypo
                     name="home"
                     size={30}
@@ -16,7 +31,9 @@ const BarDown: React.FC = () => {
                     Início
                 </Text>
             </ButtonNav>
-            <ButtonNav>
+            <ButtonNav   
+                onPress={handleSearchSelected}
+            >
                 <Ionicons
                     name="search"
                     size={30}
@@ -26,7 +43,9 @@ const BarDown: React.FC = () => {
                     Buscar
                 </Text>
             </ButtonNav>
-            <ButtonNav>
+            <ButtonNav
+                onPress={handleLibrarySelected}
+            >
                 <Ionicons
                     name="md-library-outline"
                     size={30}
@@ -36,25 +55,6 @@ const BarDown: React.FC = () => {
                     Sua Biblioteca
                 </Text>
             </ButtonNav>
-
-            {/* <Entypo
-                name="home"
-                size={32}
-                color="#fff"
-            />
-
-            <Ionicons
-                name="search"
-                size={32}
-                color="#fff"
-            />
-
-            <Ionicons
-                name="md-library-outline"
-                size={32}
-                color="#fff"
-            /> */}
-
         </FooterBar>
 
     )
