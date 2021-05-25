@@ -1,0 +1,24 @@
+{
+    "library_environments": [
+        {
+            "id": 1,
+            "title": "Playlists"
+        },
+        {
+            "id": 2,
+            "title": "Artistas"
+        },
+        {
+            "id": 3,
+            "title": "Álbuns"
+        },
+        {
+            "id": 4,
+            "title": "Podcasts e programas"
+        },
+        {
+            "id": 5,
+            "title": "Baixado"
+        }
+    ]
+}
