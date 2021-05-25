@@ -22,8 +22,6 @@ const Dashboard: React.FC = () => {
                     style={style.image}
                     resizeMode="contain"
                 />
-
-                {/* <SpotifyIcon height={300} width={300} fill="blue" /> */}
             </MainContent>
             <BarDown />
         </Background>
