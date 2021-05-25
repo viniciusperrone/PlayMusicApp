@@ -1,13 +1,18 @@
 import React from 'react';
-import { 
+import {
     View, Text
 } from 'react-native';
 
+import Background from '../../components/Background';
+
 const Dashboard: React.FC = () => {
-    return(
-        <View>
-            <Text>Dashboard</Text>
-        </View>
+    return (
+        <Background>
+            <View>
+                <Text>Dashboard</Text>
+            </View>
+        </Background>
+
     )
 }
 
