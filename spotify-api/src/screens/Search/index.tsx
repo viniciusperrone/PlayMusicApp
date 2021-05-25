@@ -4,6 +4,7 @@ import {
 } from 'react-native';
 
 import Background from '../../components/Background';
+import BarDown from '../../components/BarDown';
 
 const Search: React.FC = () => {
     return (
@@ -11,6 +12,7 @@ const Search: React.FC = () => {
             <View>
                 <Text>Search</Text>
             </View>
+            <BarDown />
         </Background>
     )
 }

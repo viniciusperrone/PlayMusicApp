@@ -4,6 +4,7 @@ import {
 } from 'react-native';
 
 import Background from '../../components/Background';
+import BarDown from '../../components/BarDown'
 
 const Library: React.FC = () => {
     return (
@@ -11,6 +12,7 @@ const Library: React.FC = () => {
             <View>
                 <Text>Library</Text>
             </View>
+            <BarDown />
         </Background>
 
     )

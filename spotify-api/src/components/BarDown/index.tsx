@@ -38,7 +38,7 @@ const BarDown: React.FC = () => {
                     name="search"
                     size={30}
                     color="#fff"
-                />
+                /> 
                 <Text style={style.text}>
                     Buscar
                 </Text>
