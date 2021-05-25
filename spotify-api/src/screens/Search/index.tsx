@@ -1,13 +1,17 @@
 import React from 'react';
-import { 
+import {
     View, Text
 } from 'react-native';
 
+import Background from '../../components/Background';
+
 const Search: React.FC = () => {
-    return(
-        <View>
-            <Text>Search</Text>
-        </View>
+    return (
+        <Background>
+            <View>
+                <Text>Search</Text>
+            </View>
+        </Background>
     )
 }
 

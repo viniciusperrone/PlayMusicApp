@@ -1,13 +1,18 @@
 import React from 'react';
-import { 
+import {
     View, Text
 } from 'react-native';
 
+import Background from '../../components/Background';
+
 const Library: React.FC = () => {
-    return(
-        <View>
-            <Text>Library</Text>
-        </View>
+    return (
+        <Background>
+            <View>
+                <Text>Library</Text>
+            </View>
+        </Background>
+
     )
 }
 

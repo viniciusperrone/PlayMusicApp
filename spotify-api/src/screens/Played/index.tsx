@@ -1,13 +1,17 @@
 import React from 'react';
-import { 
+import {
     View, Text
 } from 'react-native';
 
+import Background from '../../components/Background';
+
 const Played: React.FC = () => {
-    return(
-        <View>
-            <Text>Played</Text>
-        </View>
+    return (
+        <Background>
+            <View>
+                <Text>Played</Text>
+            </View>
+        </Background>
     )
 }
 
