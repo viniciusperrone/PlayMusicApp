@@ -31,7 +31,7 @@ const Dashboard: React.FC = () => {
 
 const style = StyleSheet.create({
     text: {
-        marginLeft: 10,
+        marginLeft: 15,
         fontSize: 24,
         fontWeight: '200',
         color: '#fff'

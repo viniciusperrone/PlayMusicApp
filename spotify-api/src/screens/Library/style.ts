@@ -5,6 +5,7 @@ export const Top = styled.View`
     height: 120;
 
     background-color: #141415;
+    margin-top: 24;
 `;
 
 export const HeaderTop = styled.View`

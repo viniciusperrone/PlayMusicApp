@@ -3,7 +3,7 @@ import styled from 'styled-components/native'
 export const TopBar = styled.View`
     width: 100%;
     height: 70;
-
+    margin-top: 30;
     justify-content: center;
 `;
 
