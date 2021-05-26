@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import {
-    View, Text, StyleSheet, FlatList
+    View, Text, StyleSheet, FlatList, ScrollView
 } from 'react-native';
 import { RectButton } from 'react-native-gesture-handler';
 import { useNavigation } from '@react-navigation/core';
@@ -8,6 +8,7 @@ import { useNavigation } from '@react-navigation/core';
 import Background from '../../components/Background';
 import BarDown from '../../components/BarDown';
 import EnviromnentButton from '../../components/EnvironmentButton';
+import ListSongs from '../../components/ListSongs';
 
 import { library_environments } from '../../utils/json/library.json';
 
@@ -128,16 +129,27 @@ const Library: React.FC = () => {
                     changedContent ?
                         <View style={{
                             flex: 1,
-                            backgroundColor: '#3ec2'
                         }}>
 
                         </View>
                         :
                         <View style={{
                             flex: 1,
-                            backgroundColor: '#fff'
                         }}>
-
+                            <ScrollView style={{
+                                flex: 1,
+                                marginBottom: 60
+                            }}>
+                                <ListSongs />
+                                <ListSongs />
+                                <ListSongs />
+                                <ListSongs />
+                                <ListSongs />
+                                <ListSongs />
+                                <ListSongs />
+                                <ListSongs />
+                                <ListSongs />
+                            </ScrollView>
                         </View>
 
                 }
