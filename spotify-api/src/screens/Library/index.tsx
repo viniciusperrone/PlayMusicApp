@@ -9,6 +9,7 @@ import Background from '../../components/Background';
 import BarDown from '../../components/BarDown';
 import EnviromnentButton from '../../components/EnvironmentButton';
 import ListSongs from '../../components/ListSongs';
+import BoxSongs from '../../components/BoxSongs';
 
 import { library_environments } from '../../utils/json/library.json';
 
@@ -129,8 +130,9 @@ const Library: React.FC = () => {
                     changedContent ?
                         <View style={{
                             flex: 1,
-                        }}>
-
+                            flexWrap: 'wrap'
+                        }}> 
+                            <BoxSongs />
                         </View>
                         :
                         <View style={{
