@@ -56,9 +56,10 @@ const Library: React.FC = () => {
         return SetEnvironment(library_environments);
     }, []);
 
+    console.log(modal);
+
     return (
         <Background>
-            { modal && <Modal />}
             <Top>
                 <HeaderTop>
                     <CircleImage />
@@ -184,6 +185,7 @@ const Library: React.FC = () => {
 
                 }
             </MainContent>
+            { modal ? <Modal /> : null}
             <BarDown />
         </Background>
 
