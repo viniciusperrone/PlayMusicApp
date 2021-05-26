@@ -7,6 +7,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 
 import Background from '../../components/Background';
 import ChevronIcon from '../../components/icons/Chevron';
+import MoreVertIcon from '../../components/icons/MoreVert';
 
 import { TopBar, TopLeft, TopMiddle, TopRight } from './style';
 
@@ -17,7 +18,6 @@ const Played: React.FC = () => {
                 colors={['#464769', '#1B1A1F']}
                 style={{
                     flex: 1,
-                    paddingTop: 50,
                 }}>
                 <TopBar>
                     <TopLeft>
@@ -25,8 +25,11 @@ const Played: React.FC = () => {
                     </TopLeft>
                     <TopMiddle>
                         <Text style={style.title}>Tocando Podcast</Text>
+                        <Text style={style.subtitle}>Hipsters Ponto Tech</Text>
                     </TopMiddle>
-                    <TopRight></TopRight>
+                    <TopRight>
+                        <MoreVertIcon />
+                    </TopRight>
                 </TopBar>
             </LinearGradient>
         </Background>
