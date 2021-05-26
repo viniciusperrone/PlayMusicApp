@@ -22,11 +22,21 @@ interface EnvironmentsProps {
 
 const Library: React.FC = () => {
     const [environment, SetEnvironment] = useState<EnvironmentsProps[]>([]);
+    const [changedContent, setChangedContent] = useState(false);
 
     const navigation = useNavigation();
 
-    function handleSelected(){
+    function handleSelected() {
         navigation.navigate('Played');
+    }
+
+    function handleContent() {
+        if (changedContent === false) {
+            return setChangedContent(true);
+        }
+        else {
+            setChangedContent(false);
+        }
     }
 
     useEffect(() => {
@@ -95,16 +105,42 @@ const Library: React.FC = () => {
                     }}>Tocados recentemente</Text>
                     <RectButton
                         style={style.button_barter}
-                        onPress={handleSelected}
+                        onPress={handleContent}
                     >
-                        <Ionicons
-                            name="layers"
-                            size={20}
-                            color="#fff"
-                        />
-                    </RectButton>
+                        {
+                            changedContent ?
 
+                                <Ionicons
+                                    name="list"
+                                    size={22}
+                                    color="#fff"
+                                />
+                                :
+                                <Ionicons
+                                    name="layers"
+                                    size={22}
+                                    color="#fff"
+                                />
+                        }
+                    </RectButton>
                 </TopContent>
+                {
+                    changedContent ?
+                        <View style={{
+                            flex: 1,
+                            backgroundColor: '#3ec2'
+                        }}>
+
+                        </View>
+                        :
+                        <View style={{
+                            flex: 1,
+                            backgroundColor: '#fff'
+                        }}>
+
+                        </View>
+
+                }
             </MainContent>
             <BarDown />
         </Background>
