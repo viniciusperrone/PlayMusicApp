@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import {
     View, Text, StyleSheet, FlatList
 } from 'react-native';
+import { RectButton } from 'react-native-gesture-handler';
+import { useNavigation } from '@react-navigation/core';
 
 import Background from '../../components/Background';
 import BarDown from '../../components/BarDown';
@@ -9,18 +11,24 @@ import EnviromnentButton from '../../components/EnvironmentButton';
 
 import { library_environments } from '../../utils/json/library.json';
 
-import { Ionicons, Feather } from '@expo/vector-icons';
+import { Ionicons, Feather, SimpleLineIcons } from '@expo/vector-icons';
 
-import { Top, HeaderTop, CircleImage, MainContent } from './style';
+import { Top, HeaderTop, CircleImage, MainContent, TopContent } from './style';
 
-interface EnvironmentsProps{
+interface EnvironmentsProps {
     id: string;
     title: string;
 }
 
 const Library: React.FC = () => {
-    const[environment, SetEnvironment] = useState<EnvironmentsProps[]>([]);
-    
+    const [environment, SetEnvironment] = useState<EnvironmentsProps[]>([]);
+
+    const navigation = useNavigation();
+
+    function handleSelected(){
+        navigation.navigate('Played');
+    }
+
     useEffect(() => {
         return SetEnvironment(library_environments);
     }, []);
@@ -43,7 +51,7 @@ const Library: React.FC = () => {
                     />
                 </HeaderTop>
                 <View>
-                    <FlatList 
+                    <FlatList
                         data={environment}
                         keyExtractor={(item) => item.id}
                         renderItem={({ item }) => (
@@ -59,7 +67,44 @@ const Library: React.FC = () => {
                 </View>
             </Top>
             <MainContent>
+                <TopContent>
+                    <RectButton
+                        style={style.button}
+                    >
+                        <Ionicons
+                            name="arrow-down"
+                            size={15}
+                            color="#fff"
+                            style={{
+                                position: 'absolute'
+                            }}
+                        />
+                        <Ionicons
+                            name="arrow-up"
+                            size={15}
+                            color="#fff"
+                            style={{
+                                marginLeft: 20
+                            }}
 
+                        />
+                    </RectButton>
+                    <Text style={{
+                        color: '#fff',
+                        marginLeft: 10
+                    }}>Tocados recentemente</Text>
+                    <RectButton
+                        style={style.button_barter}
+                        onPress={handleSelected}
+                    >
+                        <Ionicons
+                            name="layers"
+                            size={20}
+                            color="#fff"
+                        />
+                    </RectButton>
+
+                </TopContent>
             </MainContent>
             <BarDown />
         </Background>
@@ -89,9 +134,20 @@ const style = StyleSheet.create({
         width: 'auto',
         minWidth: 600,
         marginLeft: -20,
-        marginRight: 20,  
+        marginRight: 20,
         justifyContent: 'center',
     },
+    button: {
+        flexDirection: 'row',
+        width: 'auto',
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+    button_barter: {
+        right: 0,
+        position: 'absolute',
+        marginRight: 15,
+    }
 })
 
 export default Library;

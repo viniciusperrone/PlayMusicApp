@@ -5,7 +5,6 @@ export const Top = styled.View`
     height: 120;
 
     background-color: #141415;
-    margin-top: 24;
 `;
 
 export const HeaderTop = styled.View`
@@ -26,4 +25,11 @@ export const CircleImage = styled.View`
 export const MainContent = styled.View`
     flex: 1;
     background-color: #1E1E1F;
+`;
+
+export const TopContent = styled.View`
+    flex-direction: row;
+    width: 100%;
+    height: 50;
+    align-items: center;
 `;
