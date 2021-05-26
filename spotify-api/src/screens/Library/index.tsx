@@ -10,6 +10,7 @@ import BarDown from '../../components/BarDown';
 import EnviromnentButton from '../../components/EnvironmentButton';
 import ListSongs from '../../components/ListSongs';
 import BoxSongs from '../../components/BoxSongs';
+import Modal from '../../components/Modal';
 
 import { library_environments } from '../../utils/json/library.json';
 
@@ -25,6 +26,7 @@ interface EnvironmentsProps {
 const Library: React.FC = () => {
     const [environment, SetEnvironment] = useState<EnvironmentsProps[]>([]);
     const [changedContent, setChangedContent] = useState(false);
+    const [modal, setModal] = useState(false);
 
     const navigation = useNavigation();
 
@@ -32,12 +34,21 @@ const Library: React.FC = () => {
         navigation.navigate('Played');
     }
 
+    function handleModal() {
+        if (modal === false) {
+            return setModal(true);
+        }
+        else {
+            return setModal(false);
+        }
+    }
+
     function handleContent() {
         if (changedContent === false) {
             return setChangedContent(true);
         }
         else {
-            setChangedContent(false);
+            return setChangedContent(false);
         }
     }
 
@@ -47,6 +58,7 @@ const Library: React.FC = () => {
 
     return (
         <Background>
+            { modal && <Modal />}
             <Top>
                 <HeaderTop>
                     <CircleImage />
@@ -82,6 +94,7 @@ const Library: React.FC = () => {
                 <TopContent>
                     <RectButton
                         style={style.button}
+                        onPress={handleModal}
                     >
                         <Ionicons
                             name="arrow-down"

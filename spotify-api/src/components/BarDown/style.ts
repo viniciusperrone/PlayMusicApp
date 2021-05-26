@@ -6,7 +6,6 @@ export const FooterBar = styled.View`
     height: 60;
     position: absolute;
     flex-direction: row;
-
     background-color: #282829; 
 `;
 
