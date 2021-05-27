@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Users\Ediel da Rocha\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add @react-navigation/core
+  C:\Program Files\nodejs\node.exe C:\Users\Ediel da Rocha\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js remove @react-native-community/async-storage
 
 PATH: 
   C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x86;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x64;C:\Program Files\Git\cmd;C:\ProgramData\chocolatey\bin;C:\Program Files\nodejs\;C:\Program Files\OpenJDK\openjdk-8u282-b08\bin;C:\Program Files (x86)\Java\zulu11.48.21-ca-jdk11.0.11-win_x64;C:\Program Files (x86)\FreeArc\bin;C:\Users\Ediel da Rocha\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Ediel da Rocha\AppData\Roaming\npm;C:\Users\Ediel da Rocha\AppData\Local\Android\Sdk\plataform-tools;C:\Program Files\heroku\bin
@@ -14,7 +14,7 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: EPERM: operation not permitted, unlink 'C:\Users\Ediel da Rocha\Desktop\PlayMusicApp\spotify-api\node_modules\@babel\generator\node_modules\.bin'
+  Error: EPERM: operation not permitted, unlink 'C:\Users\Ediel da Rocha\Desktop\PlayMusicApp\spotify-api\node_modules\@react-native-community\async-storage\jest'
 
 npm manifest: 
   {
@@ -29,6 +29,7 @@ npm manifest:
     "dependencies": {
       "@expo/vector-icons": "^12.0.5",
       "@react-native-community/masked-view": "^0.1.11",
+      "@react-navigation/core": "^5.15.3",
       "@react-navigation/native": "^5.9.4",
       "@react-navigation/stack": "^5.14.5",
       "@types/styled-components-react-native": "^5.1.1",
@@ -1335,19 +1336,7 @@ Lockfile:
     dependencies:
       cross-spawn "^6.0.5"
   
-  "@expo/vector-icons@^12.0.4":
-    version "12.0.5"
-    resolved "https://registry.npmjs.org/@expo/vector-icons/-/vector-icons-12.0.5.tgz"
-    integrity sha512-zWvHBmkpbi1KrPma6Y+r/bsGI6MjbM1MBSe6W9A4uYMLhNI5NR4JtTnqxhf7g1XdpaDtBdv5aOWKEx4d5rxnhg==
-    dependencies:
-      lodash.frompairs "^4.0.1"
-      lodash.isequal "^4.5.0"
-      lodash.isstring "^4.0.1"
-      lodash.omit "^4.5.0"
-      lodash.pick "^4.4.0"
-      lodash.template "^4.5.0"
-  
-  "@expo/vector-icons@^12.0.5":
+  "@expo/vector-icons@^12.0.4", "@expo/vector-icons@^12.0.5":
     version "12.0.5"
     resolved "https://registry.yarnpkg.com/@expo/vector-icons/-/vector-icons-12.0.5.tgz#bc508ad05fb7e9a3e008704977cfec6c18aa7728"
     integrity sha512-zWvHBmkpbi1KrPma6Y+r/bsGI6MjbM1MBSe6W9A4uYMLhNI5NR4JtTnqxhf7g1XdpaDtBdv5aOWKEx4d5rxnhg==
@@ -1746,6 +1735,13 @@ Lockfile:
       "@babel/runtime" "^7.7.2"
       regenerator-runtime "^0.13.3"
   
+  "@react-native-community/async-storage@^1.12.1":
+    version "1.12.1"
+    resolved "https://registry.yarnpkg.com/@react-native-community/async-storage/-/async-storage-1.12.1.tgz#25f821b4f6b13abe005ad67e47c6f1cee9f27b24"
+    integrity sha512-70WGaH3PKYASi4BThuEEKMkyAgE9k7VytBqmgPRx3MzJx9/MkspwqJGmn3QLCgHLIFUgF1pit2mWICbRJ3T3lg==
+    dependencies:
+      deep-assign "^3.0.0"
+  
   "@react-native-community/cli-debugger-ui@^4.13.1":
     version "4.13.1"
     resolved "https://registry.npmjs.org/@react-native-community/cli-debugger-ui/-/cli-debugger-ui-4.13.1.tgz"
@@ -1873,7 +1869,7 @@ Lockfile:
   
   "@react-navigation/core@^5.15.3":
     version "5.15.3"
-    resolved "https://registry.npmjs.org/@react-navigation/core/-/core-5.15.3.tgz"
+    resolved "https://registry.yarnpkg.com/@react-navigation/core/-/core-5.15.3.tgz#dce7090bf3ea0d302993d742c706825e495b812e"
     integrity sha512-3ZdyDInh8qg1kygCNkmh9lFgpDf29lTvPsaMe2mm/qvmxLKSgttWBz07P2fc181aV9jTdgQpzYfWZ5KWT036zw==
     dependencies:
       "@react-navigation/routers" "^5.7.2"

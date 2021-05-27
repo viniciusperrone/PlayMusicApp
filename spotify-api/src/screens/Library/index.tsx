@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import {
-    View, Text, StyleSheet, FlatList, ScrollView
+    View, Text, StyleSheet, FlatList, ScrollView, AsyncStorage
 } from 'react-native';
 import { RectButton } from 'react-native-gesture-handler';
 import { useNavigation } from '@react-navigation/core';
@@ -27,8 +27,13 @@ const Library: React.FC = () => {
     const [environment, SetEnvironment] = useState<EnvironmentsProps[]>([]);
     const [changedContent, setChangedContent] = useState(false);
     const [modal, setModal] = useState(false);
+    const [selectedSongs, setSelectedSongs] = useState('');
 
-    const navigation = useNavigation();
+    const Store = async (key: string, value: string) => {
+        return await AsyncStorage.setItem(key, value);
+    }
+    
+    const navigation = useNavigation();  
 
     function handleSelected() {
         navigation.navigate('Played');
@@ -55,8 +60,15 @@ const Library: React.FC = () => {
     useEffect(() => {
         return SetEnvironment(library_environments);
     }, []);
+    useEffect(() => {
+        async function fetchStore(){
+            await Store('selected', 'Tocados recentemente');
+            const selected = await AsyncStorage.getItem('selected');
+            return setSelectedSongs(String(selected));
+        }
+        fetchStore();
+    }, [])
 
-    console.log(modal);
 
     return (
         <Background>
@@ -118,7 +130,7 @@ const Library: React.FC = () => {
                     <Text style={{
                         color: '#fff',
                         marginLeft: 10
-                    }}>Tocados recentemente</Text>
+                    }}>{selectedSongs}</Text>
                     <RectButton
                         style={style.button_barter}
                         onPress={handleContent}

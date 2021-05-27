@@ -8,7 +8,19 @@ export const Conteiner = styled.View`
     background-color: #282829;
 `;
 
+export const ConteinerTop = styled.View`
+    width: 100%;
+    height: 70;
+
+    justify-content: center;
+    padding-left: 25;
+
+`;
+
 export const ConteinerText = styled.View`
+    flex: 1;
+    justify-content: space-around;
+    padding-left: 25;
 `;
 
 export const ConteinerButton = styled.View``;
